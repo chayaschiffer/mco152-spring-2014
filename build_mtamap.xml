@@ -1,0 +1,16 @@
+<project name="antsimple" default="dist" basedir=".">
+
+	<target name="dist" description="generate the distribution">
+		<jar jarfile="SchifferMTAMap.jar">
+			<zipgroupfileset dir="libs" includes="**/*.jar" />
+			<manifest>
+				<attribute name="Main-class" value="schiffer.mtamap.MTAMapMain" />
+			</manifest>
+			<fileset dir="./bin">
+				<include name="schiffer/mtamap/*.class" />
+				<include name="schiffer/mtamap/*.txt" />
+			</fileset>
+		</jar>
+	</target>
+</project>
+	
